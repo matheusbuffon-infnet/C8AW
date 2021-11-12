@@ -1,0 +1,23 @@
+---
+-
+  name: "Install HTTP Packages"
+  yum: "name=httpd update_cache=yes state=latest"
+-
+  name: "Start httpd service"
+  systemd: "name=httpd state=started enabled=yes"
+-
+  file:
+    group: apache
+    mode: "0755"
+    owner: apache
+    path: "/var/www/{{ http_host }}"
+    state: directory
+  name: "Create Apache Document Root"
+-
+  name: "Set up Apache VirtualHost"
+  template:
+    dest: "/etc/httpd/conf.d/{{ http_conf }}"
+    group: root
+    mode: "u=rw,g=r,o=r"
+    owner: root
+    src: files/httpd.conf

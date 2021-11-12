@@ -1,0 +1,13 @@
+---
+-
+  become: true
+  gather_facts: false
+  hosts: target1
+  roles:
+    - apache
+    - php
+    - mysql
+    - wordpress
+    - firewall
+  vars_files:
+    - vars/default.yml

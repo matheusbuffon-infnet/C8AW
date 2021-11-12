@@ -1,0 +1,18 @@
+---
+http_conf: wp.example.com.conf
+http_host: wp.example.com
+http_port: "80"
+mysql_db: wpdb
+mysql_password: password
+mysql_root_password: your-root-password
+mysql_user: wpuser
+php_modules:
+  - php
+  - php-curl
+  - php-gd
+  - php-mbstring
+  - php-xml
+  - php-xmlrpc
+  - php-soap
+  - php-intl
+  - php-zip
