@@ -1,1 +1,1 @@
-target1 ansible_host=192.168.49.126 ansible_user=root ansible_ssh_pass=[target_root_password]
+target1 ansible_host=[target_IP] ansible_user=root ansible_ssh_pass=[target_root_password]
